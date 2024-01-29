@@ -1,0 +1,23 @@
+/* 한: NanumSquare */
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: normal;
+    src: url(../font/NanumSquareOTFRegular.woff) format('woff');
+}
+@font-face {
+    font-family: 'NanumSquare';
+    font-weight: bold;
+    src: url(../font/NanumSquareOTFBold.woff) format('woff');
+}
+
+/* 영: TTHoves */
+@font-face {
+    font-family: 'TTHoves';
+    font-weight: bold;
+    src: url(../font/TTHoves-Medium.woff) format('woff');
+}
+@font-face {
+    font-family: 'TTHoves';
+    font-weight: 800;
+    src: url(../font/TTHoves-DemiBold.woff) format('woff');
+}

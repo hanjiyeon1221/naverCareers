@@ -1,0 +1,607 @@
+/* index */
+.container {
+    padding-top: 64px;
+}
+
+.sc-visual {
+    position: relative;
+}
+.sc-visual .img-box {
+}
+.sc-visual .video_item {
+    width: 100%;
+    height: 544px;
+    object-fit: cover;
+}
+.sc-visual .txt-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.sc-visual .txt-box p {
+    opacity: 0;
+    /* font-size: 100px; */
+    font-size: clamp(85px, 8vw, 100px);
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: -2.4px;
+    white-space: nowrap;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+    text-shadow: 6px 6px 18px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+    animation: width 0.3s ease-out forwards, fade 0.8s linear forwards;
+    animation-delay: 0.8s;
+}
+/* .sc-visual .swiper-slide.swiper-slide-active .txt-box p {
+} */
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.sc-visual br.m {
+    display: none;
+}
+/* //sc-visual */
+
+.sc-search {
+    padding-bottom: 89px;
+    background-color: #fafafa;
+    color: #000;
+}
+.sc-search .inner {
+    position: relative;
+    max-width: 1408px;
+    /* min-width: 1230px; */
+    padding: 126px 104px 0;
+    margin: 0 auto;
+}
+.sc-search .search-form {
+}
+
+.sc-search .search-area {
+    display: flex;
+    position: absolute;
+    top: -27px;
+    left: 104px;
+    right: 105px;
+    font-size: 0;
+    font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif;
+    z-index: 1000;
+    background-color: #fff;
+}
+.sc-search .ico-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 28px 0 21px;
+}
+.sc-search .ico_search {
+    display: block;
+    width: 18px;
+    height: 18px;
+    background: url(../images/PC/sp-bg_pc.png) no-repeat -245px -40px / 328px 205px;
+}
+
+.sc-search .input-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    /* column-gap: 9px; */
+    font-size: 14px;
+    font-weight: bold;
+}
+.sc-search .input-box label {
+    white-space: nowrap;
+}
+.sc-search .input-box input {
+    flex: 1;
+    width: 100%;
+    padding-right: 20px;
+    padding-left: 9px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 54px;
+    /* font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif; */
+}
+input::placeholder {
+    color: #d0d0d0;
+    /* opacity: 1; */
+    /* font-weight: bold; */
+    /* font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif; */
+}
+
+.sc-search .select-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sc-search .select-box .title {
+    line-height: 54px;
+}
+.sc-search .select-box select {
+    flex: 1;
+    appearance: none;
+
+    position: relative;
+    width: 100%;
+    padding: 0 25px 0 9px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 54px;
+    letter-spacing: -0.3px;
+    /* text-align: left; */
+    color: #d0d0d0;
+    cursor: pointer;
+    background-image: url(../images/ico_arrow_down.png);
+    background-position: calc(100% - 10px) center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    background-size: 8px 5px;
+}
+.sc-search .select-box select.active {
+    background-image: url(../images/ico_arrow_up.png);
+}
+.sc-search .select-box option {
+    color: #000;
+    font-weight: normal;
+}
+.sc-search .btn-search {
+    width: 97px;
+    height: 54px;
+    line-height: 54px;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #000;
+    color: #fff;
+}
+.sc-search .btn-search:hover {
+    background-color: #16ef72;
+    color: #000;
+}
+
+.sc-search .search-box {
+    display: none;
+}
+
+.sc-search .search-con {
+}
+
+.sc-search .search-con .inner {
+    padding-top: 0;
+}
+
+.sc-search .search-list {
+    margin-top: 70px;
+}
+.sc-search .search-item {
+}
+.sc-search .search-item a {
+    display: flex;
+    padding: 0 104px;
+    max-width: 1408px;
+    margin: 0 auto;
+}
+.sc-search .search-item:hover {
+    background-color: #ebebeb;
+}
+
+.sc-search .search-item .title {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 20px 0;
+    font-size: 38px;
+    line-height: 60px;
+    letter-spacing: -0.34px;
+    font-weight: normal;
+}
+.sc-search .search-item .cnt {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    transform: translate(18px, -7px);
+    font-size: 15px;
+    letter-spacing: -0.3px;
+}
+.sc-search .search-item .cnt::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(calc(-50% - 5.5px));
+    right: -14px;
+    width: 9px;
+    height: 9px;
+    background: url(../images/PC/sp-bg_pc.png) no-repeat -176px -105px / 328px 205px;
+}
+.sc-search .search-item .desc {
+    display: inline-block;
+    vertical-align: top;
+    width: 50%;
+    padding: 20px 0 20px 15px;
+    font-size: 22px;
+    line-height: 60px;
+    letter-spacing: -0.44px;
+}
+/* //sc-search */
+
+/* search-jobs 모바일영역(max-width: 768px)*/
+.search-jobs {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    width: 100%;
+    height: 100%;
+    padding: 60px 32px;
+    background-color: #fff;
+    overflow-y: scroll;
+
+    display: none;
+}
+.search-jobs.open {
+    display: block;
+}
+
+.job-form1 {
+}
+.job-form1 .search-box {
+    position: relative;
+    border-bottom: 1px solid #d0d0d0;
+}
+.job-form1 .input-box {
+    width: 100%;
+    padding: 6px 30px 6px 0;
+    font-size: 14px;
+    line-height: 26px;
+}
+.job-form1 .btn-search {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 42px;
+    padding: 8px 0;
+}
+.job-form1 .btn-search::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-image: url(../images/PC/sp-bg_pc.png);
+    background-position: -268px -40px;
+    background-size: 328px 205px;
+}
+
+.job-form2 {
+}
+.job-form2 li {
+    line-height: 26px;
+}
+.job-form2 .filter-box {
+    margin-top: 45px;
+}
+.job-form2 .filter-title {
+    font-size: 14px;
+    line-height: 26px;
+    font-weight: bold;
+}
+.job-form2 .main-list {
+    margin-top: 8px;
+}
+.job-form2 .main-item {
+    margin-top: 14px;
+
+    word-break: break-all;
+    font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif;
+}
+.btn-item-title {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 19px;
+}
+.btn-item-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: block;
+    width: 8px;
+    height: 5px;
+    background-image: url(../images/PC/sp-bg_pc.png);
+    background-position: -136px -93px;
+    background-size: 328px 205px;
+}
+.btn-item-title.on::before {
+    transform: rotate(-180deg);
+}
+
+.job-form2 .sub-list {
+    margin: 4px 0 18px;
+
+    /* block <-> none */
+    display: none;
+}
+/* .job-form2 .sub-list.on {
+    display: block;
+} */
+.btn-item-title.on + .sub-list {
+    display: block;
+}
+
+.job-form2 .sub-item {
+    margin-top: 14px;
+    padding-left: 20px;
+}
+
+.job-form2 .sub-item .list {
+    margin: 8px 0 15px;
+
+    /* block <-> none */
+    display: none;
+}
+/* .job-form2 .sub-item .list.on {
+    display: block;
+} */
+.btn-item-title.on + .list {
+    display: block;
+}
+
+.job-form2 .sub-item .item {
+    margin-top: 14px;
+    padding-left: 20px;
+}
+
+/* 체크박스 style 공통 */
+.job-form2 li label {
+    position: relative;
+    padding-left: 19px;
+    line-height: 26px;
+    display: inline-flex;
+    align-items: center;
+}
+.job-form2 li label::before {
+    content: '';
+    position: absolute;
+    /* top: 8px; */
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border: 1px solid #d0d0d0;
+    border-radius: 50%;
+}
+.job-form2 li input:checked + label::before {
+    border: 1px solid #fff;
+    background-color: #000;
+}
+.job-form2 li input {
+    display: none;
+}
+
+.btn-clear {
+    margin-top: 42px;
+    font-size: 12px;
+    line-height: 22px;
+}
+.btn-close {
+    position: absolute;
+    top: 24px;
+    left: 22px;
+    width: 14px;
+    height: 14px;
+    background-image: url(../images/M/sp-bg_m.png);
+    background-size: 195px 181px;
+    background-position: -110px -28px;
+}
+
+/* //search-jobs 모바일영역*/
+
+.sc-people {
+    padding-top: 95px;
+    overflow: hidden;
+}
+.sc-people .inner {
+    position: relative;
+    max-width: 1408px;
+    /* min-width: 1230px; */
+    padding: 0 104px;
+    margin: 0 auto;
+}
+.sc-people .slide-area {
+    margin: 60px 0 0 -15px;
+    padding: 0 104px 68px 0;
+    overflow: visible;
+}
+.sc-people .swiper-slide a {
+    display: block;
+    margin: 0 15px;
+}
+
+.sc-people .img-box {
+    position: relative;
+    padding-bottom: 47.403%;
+}
+.sc-people .img-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sc-people .txt-box {
+    margin-top: 29px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+.sc-people .txt-box .title {
+    display: inline-block;
+    padding-right: 26px;
+    font-size: 25px;
+    font-weight: bold;
+    line-height: 36px;
+    letter-spacing: -0.5px;
+}
+.sc-people .txt-box .interview {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 4px;
+    line-height: 18px;
+    letter-spacing: -0.36px;
+}
+.sc-people .txt-box .interview::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #000;
+}
+.sc-people .txt-box .info {
+    display: flex;
+    column-gap: 15px;
+    align-items: center;
+    margin-top: 16px;
+    line-height: 24px;
+    letter-spacing: -0.28px;
+    font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif;
+}
+
+.sc-people .txt-box .info span {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+.sc-people .txt-box .info .name::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 6px;
+    width: 1px;
+    height: 10px;
+    background-color: #000;
+}
+/* ---swiper 공통 버튼 */
+.swiper .slide-btn-box {
+    position: absolute;
+    bottom: 0;
+    /* right: 105px; */
+    right: 15px;
+    display: flex;
+    column-gap: 8px;
+}
+.swiper .slide-btn-box .btn {
+    height: 32px;
+    width: 33px;
+    background-image: url(../images/PC/sp-bg_pc.png);
+    background-size: 328px 205px;
+}
+.swiper .slide-btn-box .prev {
+    background-position: -187px -172px;
+}
+.swiper .slide-btn-box .prev.swiper-button-disabled {
+    background-position: -224px -172px;
+}
+.swiper .slide-btn-box .next {
+    background-position: -113px -172px;
+}
+.swiper .slide-btn-box .next.swiper-button-disabled {
+    background-position: -150px -172px;
+}
+/* --//swiper 공통 버튼 */
+/* //sc-people */
+
+.sc-benefits {
+    padding-top: 112px;
+}
+.sc-benefits .inner {
+    position: relative;
+    max-width: 1408px;
+    /* min-width: 1230px; */
+    padding: 0 104px;
+    margin: 0 auto;
+}
+.sc-benefits .slide-area {
+    margin-top: 55px;
+    padding-bottom: 68px;
+    overflow: hidden;
+}
+
+.sc-benefits .txt-box {
+    margin-top: 29px;
+    word-break: keep-all;
+    overflow-wrap: break-word;
+    overflow: hidden;
+}
+.sc-benefits .txt-box .title {
+    display: inline-block;
+    line-height: 36px;
+    font-size: 25px;
+    letter-spacing: -0.5px;
+    font-weight: bold;
+}
+.sc-benefits .txt-box .desc {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.36px;
+}
+.sc-benefits .slide-btn-box {
+    right: 0;
+}
+/* //sc-benefits */
+
+.sc-support {
+    position: relative;
+    max-width: 1408px;
+    /* min-width: 1230px; */
+    padding: 95px 104px 102px;
+    margin: 0 auto;
+}
+.sc-support .headline {
+    font-size: 25px;
+    line-height: 32px;
+    letter-spacing: -0.25px;
+    margin-bottom: 0;
+}
+.sc-support .link-support {
+    display: flex;
+    align-items: center;
+    column-gap: 11px;
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.36px;
+    font-family: 'NanumSquare', '나눔스퀘어', '돋움', dotum, arial, sans-serif;
+}
+.sc-support .link-support .ico_btn {
+    display: inline-block;
+    width: 33px;
+    height: 32px;
+    background: url(../images/PC/sp-bg_pc.png) no-repeat -76px -172px / 328px 205px;
+}
+/* //sc-support */

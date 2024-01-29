@@ -1,0 +1,304 @@
+/* import */
+@import './font.css';
+@import './reset.css';
+@import './common.css';
+
+/* header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1500;
+}
+
+.header .inner {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 64px;
+    min-width: 768px;
+    max-width: 1920px;
+    padding: 0 104px 0 98px;
+}
+
+.header .logo {
+    display: flex;
+    align-items: center;
+}
+.header .logo a {
+    display: block;
+    width: 223px;
+    height: 35px;
+    background: url(../images/PC/sp-bg_pc.png) no-repeat -105px 0px / 328px 205px;
+}
+
+/* ---버튼 : max 1229px까지 활성화 */
+.header .btn-area {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    display: none;
+}
+.header .btn-area button {
+    width: 20px;
+    height: 14px;
+    background-image: url(../images/M/sp-bg_m.png);
+    background-size: 195px 181px;
+    background-position: -85px -28px;
+}
+
+.gnb-box-m {
+    flex: 1;
+    display: flex;
+}
+
+.header-gnb {
+    display: flex;
+    align-items: center;
+    margin-left: 29px;
+}
+.header-gnb .gnb-list {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header-gnb .gnb-item {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.header-gnb .gnb-item > a {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+.header-gnb .gnb-item:hover > a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 5px;
+    height: 0.5px;
+    background-color: #000;
+}
+.header-gnb .sub-list {
+    position: absolute;
+    top: 64px;
+    padding: 15px 0;
+
+    /* hover&focus: block */
+    /* display: none; */
+    opacity: 0;
+    pointer-events: none;
+}
+.header-gnb .gnb-list.active .sub-list {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.header-gnb .sub-item {
+}
+.header-gnb .sub-item > a {
+    display: block;
+    padding: 3px 13px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+
+.header-util {
+    display: flex;
+    margin-left: auto;
+}
+.header-util ul {
+    display: flex;
+    align-items: center;
+}
+.header-util li {
+    position: relative;
+}
+.header-util a {
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    font-size: 17px;
+    line-height: 32px;
+    letter-spacing: -0.36px;
+}
+.header-util li:hover > a::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    bottom: 5px;
+    height: 0.5px;
+    background-color: #000;
+}
+.header-util .lang a::before {
+    display: none;
+}
+.header-util .lang-k::after {
+    content: '';
+    display: inline-block;
+    vertical-align: top;
+    width: 10px;
+    height: 6px;
+    margin: 13px 0 0 3px;
+    background: url(../images/PC/sp-bg_pc.png) no-repeat -122px -93px / 328px 205px;
+    /* background-size: 328px 205px;
+    background-position: -122px -93px; */
+}
+.header-util .lang-e {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    z-index: 10;
+
+    /* lang-k click: toggle  */
+    display: none;
+}
+.header-util .lang.active .lang-k::after {
+    transform: rotate(180deg);
+}
+.header-util .lang.active .lang-e {
+    display: block;
+}
+
+@media (min-width: 1230px) {
+    .header {
+        --height: 0;
+    }
+
+    .header::after {
+        content: '';
+        position: absolute;
+        top: 64px;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: var(--height);
+        /* height: 182px; */
+        background: rgba(255, 255, 255, 0.98);
+        z-index: -1;
+    }
+
+    .header-gnb .gnb-item.menu:hover .sub-list {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .header-gnb .sub-item:hover > a {
+        position: relative;
+        display: inline-block;
+    }
+    .header-gnb .sub-item:hover > a::before {
+        content: '';
+        position: absolute;
+        left: 10px;
+        right: 10px;
+        bottom: 5px;
+        height: 0.5px;
+        background-color: #000;
+    }
+}
+/* //header */
+
+/* footer */
+.footer {
+    background-color: #f2f2f2;
+}
+.footer .inner {
+    display: flex;
+    align-items: center;
+    max-width: 1920px;
+    padding: 25px 104px 25px 98px;
+}
+
+.footer .copy-area {
+    font-size: 18px;
+    letter-spacing: -0.32px;
+}
+.footer .link-corp {
+    display: block;
+}
+
+.footer .policy-area {
+    margin-left: 30px;
+    font-weight: bold;
+    line-height: 22px;
+    letter-spacing: -0.28px;
+    color: #909090;
+}
+.footer .link-policy {
+    display: block;
+}
+
+.footer .family-area {
+    position: relative;
+    margin-left: auto;
+}
+.footer .btn-family {
+    position: relative;
+    width: 280px;
+    line-height: 42px;
+    text-align: left;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #000;
+}
+.footer .btn-family::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 10px;
+    height: 6px;
+    background-image: url(../images/PC/sp-bg_pc.png);
+    background-size: 328px 205px;
+    background-position: -122px -93px;
+}
+.footer .family-area.active .btn-family {
+    padding: 0 12px;
+    background-color: #fff;
+    border-bottom: 1px solid transparent;
+}
+.footer .family-area.active .btn-family::before {
+    transform: rotate(180deg);
+    right: 12px;
+}
+
+.footer .family-list {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    /* 또는 width: 100%; */
+    background-color: #fff;
+    z-index: 105;
+
+    display: none;
+}
+.footer .family-item {
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 42px;
+}
+.footer .family-item:hover {
+    background-color: #f2f2f2;
+}
+.footer .family-item a {
+    display: block;
+}
+.footer .family-area.active .family-list {
+    display: block;
+}
+
+/* //footer */
